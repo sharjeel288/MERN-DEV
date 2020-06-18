@@ -1,15 +1,15 @@
 const express = require('express');
 const path = require('path');
-const dbConnect = require('./config/config');
+
 const authApi = require('./routes/auth');
+const DbConnect = require('./config/config');
 const postApi = require('./routes/posts');
 const profileApi = require('./routes/profile');
 const userApi = require('./routes/user');
 
-dbConnect();
-
 const app = express();
-const PORT = process.env.PORT || 8080;
+
+DbConnect();
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
@@ -26,4 +26,5 @@ app.use('/api/auth', authApi);
 app.use('/api/user', userApi);
 app.use('/api/post', postApi);
 
+const PORT = process.env.PORT || 8080;
 app.listen(PORT);

@@ -1,8 +1,0 @@
-{
-  "env": {
-    "MONGO_USER": "Sharjeel",
-    "MONGO_PASSWORD": "sharjeel",
-    "GITHUB_CLIENT_ID": "8cdd2a04362595334e44",
-    "GITHUB_SECRET": "ac2800ac2090c00e915d2b63795354d651ef18c4"
-  }
-}
